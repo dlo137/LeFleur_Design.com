@@ -1,0 +1,278 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-color: hsl(344, 75%, 88%);
+  color: white;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 7em;
+  margin-left: 4em;
+}
+
+.logo {
+  width: 20em;
+  height: auto;
+}
+
+.primary-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 45em;
+}
+
+@media (max-width: 35em) {
+  .primary-nav {
+    position: fixed;
+    --gap: 2em;
+    inset: 9% 0 0 0;
+
+    z-index: 1000;
+    padding: min(10vh, 10em) 2em;
+
+    background: hsl(0, 0%, 0% / 0.1);
+    /* backdrop-filter: blur(1rem); */
+  }
+
+  .mobile-nav-toggle {
+    position: fixed;
+    z-index: 9999;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.primary-nav a {
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  color: snow;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.primary-nav a:hover {
+  text-decoration: underline;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.article-intro {
+  display: inline-block;
+  text-align: center;
+  margin-left: 11%;
+}
+
+.article-intro h1 {
+  user-select: none;
+  font-size: 125px;
+  color: white;
+}
+
+.article-intro p {
+  margin-top: -1em;
+}
+
+audio {
+  margin-top: 1.5em;
+}
+
+h1 {
+  display: inline-block;
+  font-family: Gill Sans MT Condensed;
+  font-size: 125px;
+}
+
+.article2-intro {
+  display: inline-block;
+  text-align: center;
+  margin-left: -6%;
+  margin-top: 4em;
+  margin-bottom: 2.5em;
+}
+
+.article3-intro {
+  display: inline-block;
+  text-align: center;
+  margin-left: 1%;
+  margin-top: 4em;
+  margin-bottom: 2.5em;
+}
+
+.audio2,
+.audio3 {
+  margin-top: 0.5em;
+}
+
+.column-container {
+  display: flex;
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.column2,
+.column3 {
+  width: 33%;
+  float: left;
+  margin: 0 1em;
+}
+
+.column1 {
+  width: 33%;
+  float: left;
+  margin: -9em 1em 0em 1em;
+  text-align: left;
+}
+
+.column2 {
+  text-align: left;
+  margin-top: -27.5em;
+}
+
+.column3 {
+  text-align: right;
+  margin-top: -26.8em;
+}
+
+.igor-container {
+  width: 0em;
+  height: 0em;
+  margin-top: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.igor-image {
+  width: 80em;
+  height: auto;
+  margin-top: -11em;
+  margin-left: 135em;
+}
+
+.ladderman-container {
+  width: 0em;
+  height: 0em;
+  margin-top: 0em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ladderman {
+  width: auto;
+  height: 110em;
+  margin-top: 82em;
+  margin-left: 29em;
+}
+
+.bullet-container {
+  width: 0em;
+  height: 0em;
+  margin-top: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bullet {
+  width: auto;
+  height: 65em;
+  margin-left: 70em;
+  margin-top: 73.5em;
+}
+
+.words-container {
+  width: 0em;
+  height: 0em;
+  margin-top: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.words {
+  width: auto;
+  height: 30em;
+  margin-left: 62em;
+  margin-top: 64.8em;
+}
+
+#T {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+#Z {
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+
+#Zz {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 15%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}

@@ -1,0 +1,121 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(185, 55%, 84%);
+  color: white;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 7em;
+  margin-left: 4em;
+}
+
+.logo {
+  width: 20em;
+  height: auto;
+}
+
+.primary-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-nav a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 35em) {
+  .primary-nav {
+    position: fixed;
+    --gap: 2em;
+    inset: 9% 0 0 0;
+
+    z-index: 1000;
+    padding: min(10vh, 10em) 2em;
+
+    background: hsl(0, 0%, 0% / 0.1);
+    /* backdrop-filter: blur(1rem); */
+  }
+
+  .mobile-nav-toggle {
+    position: fixed;
+    z-index: 9999;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.primary-nav a {
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  color: snow;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+#img-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 0em;
+  grid-template-columns: 22.5% 22.5% 22.5% 22.5%;
+}
+
+#img-grid > div {
+  margin-left: 15%;
+  height: 250px;
+  width: 250px;
+  justify-content: center;
+  align-content: center;
+}
+
+.album_cover {
+  height: 225px;
+  width: 225px;
+  margin-left: 4.5%;
+  margin-top: 4.5%;
+}
+
+.albums {
+  transition: transform 0.2s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.albums:hover {
+  transform: scale(
+    1.2
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
